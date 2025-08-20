@@ -1,0 +1,67 @@
+
+<html>
+<head><title>Employee Analysis</title></head>
+<body>
+<h2>Employee Department Analysis</h2>
+<p>Email: 23f2002842@ds.study.iitm.ac.in</p>
+<p>Marketing Count: 3</p>
+
+<h3>Python Code:</h3>
+<pre>
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank'], 'Department': ['Marketing', 'HR', 'Marketing', 'Finance', 'Marketing', 'IT']}
+df = pd.DataFrame(data)
+marketing_count = (df["Department"] == "Marketing").sum()
+print("Marketing count:", marketing_count)
+sns.countplot(x="Department", data=df, palette="Set2")
+</pre>
+
+<h3>Visualization:</h3>
+
+
+<style>
+
+</style>
+
+<div id="fig_el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d362704434334"></div>
+<script>
+function mpld3_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
+   // already loaded: just create the figure
+   !function(mpld3){
+       
+       mpld3.draw_figure("fig_el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d362704434334", {"width": 600.0, "height": 400.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [-0.5, 3.5], "ylim": [0.0, 3.15], "xdomain": [-0.5, 3.5], "ydomain": [0.0, 3.15], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 4, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 8, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el1014c1d1a028-a07f-4777-813b-b436d2488947", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014bfb82599-60fb-4831-b826-e28df6315d18", "dasharray": "none", "alpha": 1, "facecolor": "#71B6A0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014d714a522-f0b6-4f8d-a0c7-681c3571a5a5", "dasharray": "none", "alpha": 1, "facecolor": "#E89575", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014c2a46e2c-f335-4083-a40c-5e7041269744", "dasharray": "none", "alpha": 1, "facecolor": "#94A3C3", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el101457d60869-ae39-4703-b0cc-2de884f235b7", "dasharray": "none", "alpha": 1, "facecolor": "#DB95C0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.20179264100896077], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el1014b74671c6-45ba-4215-bd01-8b57fd80dfbe"}, {"text": "count", "position": [-0.0801672640382318, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10142dedbe22-2234-4605-b2d1-202f568f036c"}, {"text": "Department Distribution", "position": [0.5, 1.027056277056277], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10145f7dba64-4b7f-4d24-886f-c735c3b8fcb8"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0], [0.4, 0.0], [0.4, 3.0], [-0.4, 3.0]], "data02": [[0.6, 0.0, 1.6, 2.6], [1.4, 0.0, 2.4, 3.4], [1.4, 1.0, 2.4, 3.4], [0.6, 1.0, 1.6, 2.6]]}, "id": "el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d36", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+   }(mpld3);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/mpld3
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.11.js", function(){
+         
+         mpld3.draw_figure("fig_el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d362704434334", {"width": 600.0, "height": 400.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [-0.5, 3.5], "ylim": [0.0, 3.15], "xdomain": [-0.5, 3.5], "ydomain": [0.0, 3.15], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 4, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 8, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el1014c1d1a028-a07f-4777-813b-b436d2488947", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014bfb82599-60fb-4831-b826-e28df6315d18", "dasharray": "none", "alpha": 1, "facecolor": "#71B6A0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014d714a522-f0b6-4f8d-a0c7-681c3571a5a5", "dasharray": "none", "alpha": 1, "facecolor": "#E89575", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014c2a46e2c-f335-4083-a40c-5e7041269744", "dasharray": "none", "alpha": 1, "facecolor": "#94A3C3", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el101457d60869-ae39-4703-b0cc-2de884f235b7", "dasharray": "none", "alpha": 1, "facecolor": "#DB95C0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.20179264100896077], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el1014b74671c6-45ba-4215-bd01-8b57fd80dfbe"}, {"text": "count", "position": [-0.0801672640382318, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10142dedbe22-2234-4605-b2d1-202f568f036c"}, {"text": "Department Distribution", "position": [0.5, 1.027056277056277], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10145f7dba64-4b7f-4d24-886f-c735c3b8fcb8"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0], [0.4, 0.0], [0.4, 3.0], [-0.4, 3.0]], "data02": [[0.6, 0.0, 1.6, 2.6], [1.4, 0.0, 2.4, 3.4], [1.4, 1.0, 2.4, 3.4], [0.6, 1.0, 1.6, 2.6]]}, "id": "el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d36", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & mpld3
+    mpld3_load_lib("https://d3js.org/d3.v5.js", function(){
+         mpld3_load_lib("https://mpld3.github.io/js/mpld3.v0.5.11.js", function(){
+                 
+                 mpld3.draw_figure("fig_el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d362704434334", {"width": 600.0, "height": 400.0, "axes": [{"bbox": [0.125, 0.10999999999999999, 0.775, 0.77], "xlim": [-0.5, 3.5], "ylim": [0.0, 3.15], "xdomain": [-0.5, 3.5], "ydomain": [0.0, 3.15], "xscale": "linear", "yscale": "linear", "axes": [{"position": "bottom", "nticks": 4, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}, {"position": "left", "nticks": 8, "tickvalues": null, "tickformat_formatter": "", "tickformat": null, "scale": "linear", "fontsize": 10.0, "grid": {"gridOn": false}, "visible": true}], "axesbg": "#FFFFFF", "axesbgalpha": null, "zoomable": true, "id": "el1014c1d1a028-a07f-4777-813b-b436d2488947", "lines": [], "paths": [{"data": "data01", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014bfb82599-60fb-4831-b826-e28df6315d18", "dasharray": "none", "alpha": 1, "facecolor": "#71B6A0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 0, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014d714a522-f0b6-4f8d-a0c7-681c3571a5a5", "dasharray": "none", "alpha": 1, "facecolor": "#E89575", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 2, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el1014c2a46e2c-f335-4083-a40c-5e7041269744", "dasharray": "none", "alpha": 1, "facecolor": "#94A3C3", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}, {"data": "data02", "xindex": 3, "yindex": 1, "coordinates": "data", "pathcodes": ["M", "L", "L", "L", "Z"], "id": "el101457d60869-ae39-4703-b0cc-2de884f235b7", "dasharray": "none", "alpha": 1, "facecolor": "#DB95C0", "edgecolor": "none", "edgewidth": 1.0, "zorder": 1}], "markers": [], "texts": [{"text": "Department", "position": [0.5, -0.20179264100896077], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "hanging", "rotation": -0.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el1014b74671c6-45ba-4215-bd01-8b57fd80dfbe"}, {"text": "count", "position": [-0.0801672640382318, 0.5], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -90.0, "fontsize": 10.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10142dedbe22-2234-4605-b2d1-202f568f036c"}, {"text": "Department Distribution", "position": [0.5, 1.027056277056277], "coordinates": "axes", "h_anchor": "middle", "v_baseline": "auto", "rotation": -0.0, "fontsize": 12.0, "color": "#000000", "alpha": 1, "zorder": 3, "id": "el10145f7dba64-4b7f-4d24-886f-c735c3b8fcb8"}], "collections": [], "images": [], "sharex": [], "sharey": []}], "data": {"data01": [[-0.4, 0.0], [0.4, 0.0], [0.4, 3.0], [-0.4, 3.0]], "data02": [[0.6, 0.0, 1.6, 2.6], [1.4, 0.0, 2.4, 3.4], [1.4, 1.0, 2.4, 3.4], [0.6, 1.0, 1.6, 2.6]]}, "id": "el101475b9c8e2-1b68-42fa-baf4-9fe5d3218d36", "plugins": [{"type": "reset"}, {"type": "zoom", "button": true, "enabled": false}, {"type": "boxzoom", "button": true, "enabled": false}]});
+            })
+         });
+}
+</script>
+</body>
+</html>
